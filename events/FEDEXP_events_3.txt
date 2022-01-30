@@ -52,8 +52,10 @@ country_event = {
 			limit = {
 				is_spiritualist = yes
 				is_country_type = default
-				NOT = { is_in_federation_with = root }
-				NOT = { is_at_war_with = root }
+				NOR = {
+					is_in_federation_with = root
+					is_at_war_with = root
+				}
 				OR = {
 					has_federation = no
 					is_federation_leader = yes
